@@ -1,0 +1,49 @@
+<h2>Documentos</h2>
+<script>
+    function pulaLinha(){
+
+document.write("<br>")
+document.write("<br>")
+}
+    function mostra(frase){
+    document.write(frase)
+    }
+    function Cliente (nome, cpf, email, saldo) {
+    this.nome = nome
+    this.cpf = cpf
+    this.email = email
+    this.saldo = saldo
+     this.depositar = function(valor){
+      this.saldo += valor
+    }
+   }
+   const souza = new Cliente("Souza", "12312312312", "souza@email.com", 100)
+
+   function ClientePoupanca(nome, cpf, email, saldo, saldoPoup){
+    Cliente.call(this, nome, cpf, email, saldo)
+    this.saldoPoup = saldoPoup
+   }
+   const silva = new ClientePoupanca("Silva", "12312312312", "silva@email.com", 100, 200)
+
+   ClientePoupanca.prototype.depositarPoup = function(valor){
+    this.saldoPoup += valor
+   }
+//Na saída do console veremos que usando .hasOwnProperty(), a função “saldoPoup” só existe no objeto do tipo ClientePoupanca.
+mostra("Cliente Souza")
+pulaLinha()
+mostra(souza.hasOwnProperty("saldoPoup"))
+pulaLinha()
+mostra(silva.hasOwnProperty("saldoPoup"))
+pulaLinha()
+mostra(souza instanceof Cliente)
+pulaLinha()
+mostra("Cliente Silva")
+pulaLinha()
+mostra(silva instanceof ClientePoupanca)
+pulaLinha()
+mostra(Function.prototype.isPrototypeOf(Cliente))
+pulaLinha()
+mostra(Cliente.constructor === Function)
+
+//Os objetos souza e silva são do tipo object, ou seja, ambos herdam do protótipo de object, que está associado a todo objeto criado no JavaScript.
+</script>

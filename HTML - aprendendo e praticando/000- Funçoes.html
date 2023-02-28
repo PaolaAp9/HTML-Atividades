@@ -1,0 +1,56 @@
+<h1>
+                          InsertionSort
+</h1>
+<script>
+    const livros = require('./listaJogos')
+    const troca = require('./troca')
+
+    function insertionSort(lista){
+    for (let atual = 0; atual < lista.length; atual++){
+        let analise = atual
+        while(analise > 0 && lista[analise].preco < lista[analise - 1].preco){
+            troca(lista,analise)
+            analise --
+        }
+    }
+    console.log(lista)
+}
+insertionSort(livros)
+</script>
+<h1>
+                        Trocaaaa
+</h1>
+<script>
+    function troca(lista,analise) {
+        let itemAnalise = lista[analise]
+        let itemAnterior = lista[analise - 1]
+
+        lista[analise] = itemAnterior
+        lista[analise - 1] = itemAnalise
+    }
+    module.exports = troca
+</script>
+<h1>
+                       Menor Valor
+</h1>
+<script>
+    const jogos = require('./listaJogos')
+
+fu
+const jogos = require('./PrecosJogos')
+
+console.log(jogos)
+
+function menorValor(arrProdutos, posicaoInicial) {
+    let maisBarato = posicaoInicial;
+    for (let atual = posicaoInicial; atual < arrProdutos.length; atual ++){
+        if(arrProdutos[atual].preco < arrProdutos[maisBarato].preco) {
+            maisBarato = atual
+        }
+    }
+    return maisBarato
+ }
+ console.log(jogos[menorValor(jogos, 0)])
+ module.exports = menorValor;
+</script>
+

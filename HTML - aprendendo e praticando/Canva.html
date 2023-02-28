@@ -1,0 +1,69 @@
+<canvas width="1000" height="800"></canvas>
+
+<script>
+
+    //acessando o html
+    var tela = document.querySelector('canvas');
+    //pedindo um pincel no contexto 2d para desenhar
+    var pincel = tela.getContext('2d');
+    //definir um cor válida
+    pincel.fillStyle = 'white';
+    //fill é preencher e rect é retangulo. 
+    pincel.fillRect(0, 0, 500, 500);
+
+    pincel.fillStyle = 'blue';
+    pincel.fillRect(0, 0, 700, 500);
+
+    pincel.fillStyle = 'white';
+    pincel.fillRect(0, 200, 700, 500);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.arc(600, 190, 50, 0, 2 * 3.14);
+    pincel.fill();
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 500, 700, 10);
+
+    pincel.fillStyle = 'orange';
+    pincel.fillRect(220, 350, 160, 150);
+
+    pincel.fillStyle = 'purple';
+
+    pincel.beginPath();
+    pincel.moveTo(300, 160);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'red';
+    pincel.beginPath();
+    pincel.arc(250, 425, 15, 0, 2 * 3.14);
+    pincel.fill();
+ 
+    pincel.fillStyle = 'red';
+    pincel.beginPath();
+    pincel.arc(350, 425, 15, 0, 2 * 3.14);
+    pincel.fill();
+
+    
+    //pincel.fillStyle = 'blue';
+    //pincel.fillRect(0, 225, 500, 50);
+
+    //pincel.fillStyle = 'blue';
+    //pincel.fillRect(0, 450, 500, 50);
+
+    //pincel.fillStyle = 'red';
+    //pincel.fillRect(0, 0, 10, 500);
+
+    //pincel.fillStyle = 'red';
+    //pincel.fillRect(0, 0, 500, 10);
+
+    //pincel.fillStyle = 'pink';
+    //pincel.fillRect(500, 0, 10, 500);
+
+    //pincel.fillStyle = 'pink';
+    //pincel.fillRect(0, 490, 510, 10);
+
+
+</script>

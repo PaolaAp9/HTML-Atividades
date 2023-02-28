@@ -1,0 +1,24 @@
+<script>
+    function mostra(frase){
+document.write(frase)
+}
+
+const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com",
+    amiga: "Karina",
+      dataNsc: "22",
+      doc:"13610795619",
+    status: "desaparecida"
+}
+
+console.log (aluno.amiga)
+delete aluno["status"]
+
+mostra ("O nome do aluno é " + aluno.nome + " e ela tem " + aluno.idade + " anos de idade <br>")
+mostra ("Documento: " + aluno.cpf.substring(0,3))
+document.write("<br>")
+mostra("O nome dela é " + aluno.amiga + ", ela tem " + aluno.dataNsc + ", qual seu status " + aluno.status )
+</script>

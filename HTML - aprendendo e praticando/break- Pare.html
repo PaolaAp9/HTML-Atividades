@@ -1,0 +1,23 @@
+<script>
+    var loginCadastrado = "Paola"
+    var senhaCadastrada = "12345678"
+    var maximoTentativas = 3
+    var tentativaAtual = 1
+
+while(tentativaAtual <= maximoTentativas){
+    var loginInformado = prompt("Informe seu login")
+    var senhaInformada = prompt("Informe sua senha")
+    if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada){
+        alert("Bem-Vindo ao sistema, " + loginInformado)
+        tentativaAtual = maximoTentativas
+    } else{
+        if(tentativaAtual == 3){
+            alert("Numero permitido de temtativas ultrapassadas!")
+            break
+        }else{
+            alert("Login invalido.Tente novamente")
+        }
+    }
+    tentativaAtual = tentativaAtual +1
+}
+</script>

@@ -1,0 +1,28 @@
+<script>
+ function pulaLinha(){
+
+document.write("<br>")
+document.write("<br>")
+}
+function mostra(frase ){
+    document.write(frase)
+}
+
+var notas1 = [10, 6.5, 8 ,7.5]
+var notas2 = [9, 6, 6]
+var notas3 = [8.5, 9.5]
+var media = 0
+var notasGerais = [notas1,notas2,notas3]
+
+for (let i = 0; i < notasGerais.length; i++) {
+  for (let j = 0; j < notasGerais[i].length; j++) {
+   mostra(media += notasGerais[i][j]/notasGerais[i].length)
+   pulaLinha()
+  }
+}
+
+mostra(media = media/notasGerais.length)
+
+console.log(media)
+
+</script>

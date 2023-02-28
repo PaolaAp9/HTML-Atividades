@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<input/>
+<button>Exibir texto digitando </button>
+<h1>Escolha teu prato</h1>
+O cardapio de hoje é:
+<br><br>
+Opção 1 - Arroz branco, feijão e batata frita;
+<br>
+Opção 2 - Arroz e feijoada
+<br>
+Opçâo 3 - Arroz e salada
+<script>
+    var input = document.querySelector("input")
+    function exibeTexto(){
+        alert(input.value)
+    }
+    var button = document.querySelector("button")
+    button.onclick = exibeTexto
+    
+    
+</script>
+
+<script>
+    function tchau(){
+        alert("Boa escolha, iremos fazer o teu prato!! ")
+    }
+    //document.querySelector("")busca
+    var button = document.querySelector("button")
+    button.onclick = tchau
+</script>

@@ -1,0 +1,23 @@
+<script>
+     function mostra(frase){
+document.write(frase)
+}
+
+const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com",
+    telefones: ["444455555","-------------", "778779799"]
+}
+aluno.parentes = {
+    nome: "Joana",
+    parentesco: "Tia",
+    dataNasc: "19/07/1999"
+}
+
+
+aluno.parentes.nome = "Karina"
+
+mostra("O nome dela é " + aluno.parentes.nome + ", ela é minha " + aluno.parentes.parentesco + ", qual sua data de nascimento " + aluno.parentes.dataNasc)
+</script>

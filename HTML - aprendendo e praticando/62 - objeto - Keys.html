@@ -1,0 +1,42 @@
+<script>
+    function mostra(frase){
+document.write(frase)
+}
+ const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com",
+    telefones: ["444455555","-------------", "778779799"],
+    parentes: [{ 
+        nome: "Lúcia",
+        parentesco: "Mãe",
+        dataNasc: "30/07/1971"},,
+        {
+         nome: "José",
+         parentesco: "Pai",
+          dataNasc: "27/02/1969"
+       }
+    ],
+    notaFinal: 10,
+    avaliar: function(nota){
+        
+        this.notaFinal += nota
+    }
+}
+const verificaParentes = (obj) => {
+    const parenAluno = Object.keys(obj); //retorna uma array com todas as keys(chaves)
+    //como é uma array podemos usar métodos de array
+    if(parenAluno.includes("parentes")){
+        mostra(`Ebaaa ${obj.nome} . Você tem parentes!!
+        `);
+    }
+    else 
+    mostra(`${obj.nome} . Você não tem parentes, Não fiqueee triste`);
+}
+
+verificaParentes(aluno)
+console.log(Object.values(aluno)) //pega os valores de um objeto em uma array
+
+console.log(Object.entries(aluno)) //traz uma array de arrays com o conjunto de chaves e valores 
+</script>

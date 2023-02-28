@@ -1,0 +1,29 @@
+<center> 
+<h3> Turma de Manhã</h3>
+<script>
+    function pulaLinha(){
+
+document.write("<br>")
+document.write("<br>")
+}
+function mostra(frase ){
+    document.write(frase)
+}
+
+var turmaDaManha = ["Esther","Karina","Victoria"]
+var notasDaTurma = [5,7,7]
+var carismaDaTurma = [10,7,8.5]
+var nome = prompt("Digite seu nome:")
+
+var listaDetalhada = [ turmaDaManha,notasDaTurma,carismaDaTurma]
+var exibeNomeNotaECarisma = (aluno) => {
+if (listaDetalhada[0].includes(aluno)) {
+    indice = listaDetalhada[0].indexOf(aluno)
+mostra ("Olá aluno(a) " + listaDetalhada[0][indice] + ", sua nota é " + listaDetalhada[1][indice] + " e seu carisma é " + listaDetalhada[2][indice]+ ".")
+} else {
+    mostra ("Aluno não cadastrado")
+}
+}
+console.log(exibeNomeNotaECarisma(nome))
+</script>
+</center>

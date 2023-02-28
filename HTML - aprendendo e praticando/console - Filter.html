@@ -1,0 +1,33 @@
+<center>
+<h2>Aprovado ou Reprovados</h2><script>
+    function pulaLinha(){
+
+document.write("<br>")
+document.write("<br>")
+}
+function mostra(frase ){
+    document.write(frase)}
+
+    var alunos = [" Paola ", " Karina ", " Victória ", " Esther "]
+    document.write("Os alunos da sala são: <br>",alunos)
+    pulaLinha()
+    var notas = [5, 7, 10, 2]
+
+
+/*por padrão no JavaScript quando um parâmetro exite e 
+não precisa ser declarado colocamo um _ */
+document.write("Os alunos Aprovados são: <br>")
+var aprovados = mostra(alunos.filter((_, indice) => notas[indice] >= 5))
+
+pulaLinha()
+document.write("Os alunos Reprovado são: <br>")
+var reprovados = mostra(alunos.filter((_, indice) => notas[indice] < 5))
+
+console.log("Aprovados: ${aprovados)")
+console.log("Reprovados: ${reprovados}")
+
+/*O método filter() cria um novo array com todos os elementos que passaram no 
+teste implementado pela função fornecida. Ela retorna booleano (true/false)*/
+
+</script>
+</center>

@@ -1,0 +1,30 @@
+<script>
+     function mostra(frase){
+document.write(frase)
+}
+
+const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com",
+    telefones: ["444455555","-------------", "778779799"]
+}
+aluno.parentes = {
+    nome: "Joana",
+    parentesco: "Mãe",
+    dataNasc: "30/07/1971"
+}
+aluno.parentes = {
+    nome: "José",
+    parentesco: "Pai",
+    dataNasc: "27/02/1969"
+}
+
+mostra(aluno)
+
+const maisNovo = aluno.parentes.filter(paren => 
+paren.dataNasc==="30/07/1971")
+
+mostra(maisNovo[0].nome)
+</script>

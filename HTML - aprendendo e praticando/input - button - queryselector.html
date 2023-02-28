@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<input/> <!-- input é uma caixa para entrada de  dados no html-->
+<button> Comparar com o meu segredo </button><!--Button é um botão-->
+<script>
+     var segredo = Math.round(Math.random() * 10)
+    /*Utilizaremos a quarySelector() para inserir aquilo que está no mundo html na variavel input.
+    Ela receberá como parametro o nome da tag que deseja utilizar,no caso"input"*/
+    var input = document.querySelector("input")
+    //foco no campo de texto sempre qie o usuario errar o numero utilizado a função input.focus()
+    input.focus()
+    function verificar(){
+        //para sabermos qual o valor que está inserido na variavel,utilizaremos o imput.value
+        if(input.value == segredo){
+        alert("Você acertou!")    
+        }else {
+            alert("Você errou!")
+        }
+        input.value = " "
+        input.focus()
+    }
+    var button = document.querySelector("button")
+    /* Para associar ao botão a execução do verificar() utilizaremos a propriedade .onclick(), em português,
+    "on click" significa "no clicar", ou seja, queremos que a variavel seja feita ao clicar*/
+    button.onclick = verificar
+    /*Sem os () da a função verificar não é executadas e sim todas a informação contida em verificar ,isto é */
+</script>

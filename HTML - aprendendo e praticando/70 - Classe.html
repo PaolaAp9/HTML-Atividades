@@ -1,0 +1,28 @@
+<script>
+    function mostra(frase){
+document.write(frase)
+}
+    //dar sempre o nome da classe com letra maiúscula
+class Aluno{
+    constructor(nome, sobrenome, ra, notas){
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.ra = ra
+        this.notas = notas
+    }
+    avaliar(nota){
+       mostra(this.notas.push(nota))
+    }
+    exibirNotas(){
+        mostra(console.log(this.notas))
+    }    
+}
+
+const gabriela = new Aluno("Gabriela", "Silva", "171171", [0]) 
+
+mostra(gabriela.avaliar(2))
+
+mostra(gabriela.exibirNotas())
+
+mostra(gabriela)
+</script>

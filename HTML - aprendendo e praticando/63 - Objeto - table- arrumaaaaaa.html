@@ -1,0 +1,54 @@
+<script>
+     function mostra(frase){
+document.write(frase)
+}
+ const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com",
+    telefones: ["444455555", "778779799"],
+    parentes: [{ 
+        nome: "Lúcia",
+        parentesco: "Mãe",
+        dataNasc: "30/07/1971"},
+        {
+            nome: "José",
+            parentesco: "Pai",
+            dataNasc: "27/02/1969"
+        }
+    ],
+    notaFinal: 10,
+    avaliar: function(nota){
+        
+        this.notaFinal += nota
+    }
+}
+ const aluno2 = {  
+     nome:"Karina",
+        idade: 22,
+        cpf: "5165549848",
+        email: "Karina@gmail.com",
+        fones: ["9898465446", "458546465"],
+        parentes: [{
+            nome: "Silvana",
+            parentesco: "Mãe",
+            dataNasc: "9/01/1974",
+        },
+        {
+            nome: "Claudecy",
+            parentesco: "Pai",
+            dataNasc: "04/02/1972",
+        }
+        ],
+        notaFinal: 10,
+        avaliar: function (nota) {
+
+            this.notaFinal += nota
+        }
+    }
+    //operador de espalhamento
+const listParentes = [aluno.parentes,aluno2.parentes]
+mostra(listParentes)
+//console.table(listParentes)
+</script>

@@ -1,0 +1,24 @@
+<script>
+    function pulaLinha(){
+
+document.write("<br>")
+document.write("<br>")
+}
+function mostra(frase ){
+    document.write(frase)
+}
+var salaManha = [5, 10, 8, 6.5, 7, 9, 4, 3, 5.5]
+var salaTarde = [6, 5, 7, 1, 9, 8]
+var salaNoite = [5, 5, 4.5, 6]
+
+function media(notas){   
+    var soma = notas.reduce((acum, atual) => atual + acum, 0)
+    mostra (soma/notas.length)
+}   
+
+console.log(`Média é: ${media(salaManha)}`)
+pulaLinha()
+console.log(`Média é: ${media(salaTarde)}`)
+pulaLinha()
+console.log(`Média é: ${media(salaNoite)}`)
+</script>

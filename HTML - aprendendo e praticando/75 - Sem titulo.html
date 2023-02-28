@@ -1,0 +1,45 @@
+<script>
+function pulaLinha(){
+document.write("<br>")
+document.write("<br>")
+}
+function mostra(frase){
+document.write(frase)
+}
+const precosJogos = [
+  {     titulo1: 'Zelda',
+        precos: 250
+  },
+{
+        titulo: 'MegaMen',
+        precos: 150
+},
+{
+        titulo: 'Shinobi',
+        precos: 175
+},
+{       titulo: 'KungFu Master',
+        precos: 550
+},
+{
+        titulo: 'Fantasy Star',
+        precos: 125
+},
+]
+console.table(precosJogos)
+
+var menor = 1000
+var maior = 0
+
+precosJogos.forEach(precosJogos => {
+
+    maior = Math.max(precosJogos.precos, maior)
+    menor = Math.min(precosJogos.precos, menor)
+
+})
+
+mostra("O jogo mais barato é ", precosJogos.titulo1+ menor)
+pulaLinha()
+mostra("O jogo mais caro é " + maior)
+
+</script>

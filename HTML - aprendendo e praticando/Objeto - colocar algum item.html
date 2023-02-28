@@ -1,0 +1,22 @@
+<script>
+    function mostra(frase){
+document.write(frase)
+}
+
+const aluno = {
+    nome: "Paola",
+    idade: 22,
+    cpf: "15062033616",
+    email: "Paola@hotmail.com"
+}
+//const chaves = ["nome", "idade","cpf", "email"]
+mostra ("O nome da aluna é " + aluno.nome + " e ela tem " + aluno.idade + " anos de idade <br>")
+mostra ("Documento: " + aluno.cpf.substring(0,3))
+console.log(aluno);
+document.write("<br>")
+document.write("Seus telefones são: ")
+mostra(aluno.telefone = "035978954662 e ")
+console.log(aluno)
+mostra(aluno.telefone = "035984234184")
+console.log(aluno)
+</script>

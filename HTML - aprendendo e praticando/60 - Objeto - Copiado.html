@@ -1,0 +1,21 @@
+<script>
+    function mostra(frase){
+document.write(frase)
+}
+
+const aluno = {
+    nome: "Paola",
+    profissao: "Estudante",
+    nivel: "22"
+}
+const aluno2 = Object.create(aluno)
+aluno2.nome = "Paola Aparecida"
+
+mostra(aluno.nome +" , " + aluno.profissao+ " , "  + aluno.nivel)
+document.write("<br>")
+mostra(aluno2.nome +" , " + aluno2.profissao+ " , "  + aluno2.nivel)
+document.write("<br>")
+aluno2.profissao = "Programação"
+mostra(aluno2.nome +" , " + aluno2.profissao+ " , "  + aluno2.nivel)
+
+</script>
